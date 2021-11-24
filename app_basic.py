@@ -5,7 +5,7 @@ import pymongo
 from flask import Flask, jsonify
 
 load_dotenv() # use dotenv to hide sensitive credential as environment variables
-DATABASE_URL=f'mongodb+srv://jt27664Mongo:<password>@flaskmongoherokucluster.rtngq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' # get connection url from environment
+DATABASE_URL=f'mongodb://jt27664Mongo:<password>@flaskmongoherokucluster.rtngq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' # get connection url from environment
 
 client=pymongo.MongoClient(DATABASE_URL) # establish connection with database
 mongo_db=client.db
